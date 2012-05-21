@@ -1,0 +1,5 @@
+source 'http://rubygems.org'
+gem 'sinatra'
+gem 'activerecord', '~> 3.2.3'
+gem 'pg'
+#gem 'ruby-debug'
