@@ -16,20 +16,20 @@ end
 # 
 # -- DROP TABLE contacts;
 # 
-# CREATE TABLE contacts
-# (
-  # id serial NOT NULL,
-  # label character varying(255),
-  # "number" character varying(255),
-  # user_id integer,
-  # created_at timestamp without time zone NOT NULL,
-  # updated_at timestamp without time zone NOT NULL,
-  # CONSTRAINT contacts_pkey PRIMARY KEY (id)
-# )
-# WITH (
-  # OIDS=FALSE
-# );
-# ALTER TABLE contacts OWNER TO postgres;
+#CREATE TABLE contacts
+#(
+#  id serial NOT NULL,
+#  label character varying(255),
+#  "number" character varying(255),
+#  user_id integer,
+#  created_at timestamp without time zone NOT NULL,
+#  updated_at timestamp without time zone NOT NULL,
+#  CONSTRAINT contacts_pkey PRIMARY KEY (id)
+#)
+#WITH (
+#  OIDS=FALSE
+#);
+#ALTER TABLE contacts OWNER TO postgres;
 # 
 # -- Index: index_contacts_on_user_id
 # 
