@@ -1,5 +1,4 @@
 load 'rmContactFiles.rb'
-#require 'ruby-debug'
 
 get '/ping' do
   "Its working... :)"

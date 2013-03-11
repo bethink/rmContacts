@@ -22,6 +22,8 @@ GEM
     jdbc-postgres (9.2.1002)
     mime-types (1.18)
     multi_json (1.5.0)
+    puma (1.6.3-java)
+      rack (~> 1.2)
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
@@ -50,6 +52,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord (~> 3.2.8)
   activerecord-jdbcpostgresql-adapter
+  puma
   rack-test
   rake
   rest-client
