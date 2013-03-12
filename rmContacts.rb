@@ -24,7 +24,7 @@ end
 
 post '/update_messages' do
 
-  raise params.inspect
+  #raise params.inspect
 
   @user = User.find_by_id(params[:user_id])
 

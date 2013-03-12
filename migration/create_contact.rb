@@ -40,3 +40,16 @@ end
   # USING btree
   # (user_id);
 # 
+
+
+#ActiveRecord::Base.connection.execute(%q(CREATE TABLE contacts
+#(
+#  id serial NOT NULL,
+#  label character varying(255),
+#  "number" character varying(255),
+#  user_id integer,
+#  created_at timestamp without time zone NOT NULL,
+#  updated_at timestamp without time zone NOT NULL,
+#  CONSTRAINT contacts_pkey PRIMARY KEY (id)
+#);
+#))
