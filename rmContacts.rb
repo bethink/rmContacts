@@ -24,7 +24,12 @@ end
 
 post '/update_messages' do
 
+  puts "======================="
   puts params.inspect
+  puts params[:email].inspect
+  puts params["email"].inspect
+  puts params[:contacts].count.inspect
+  puts "======================="
 
   @user = User.find_by_id(params[:user_id])
 
