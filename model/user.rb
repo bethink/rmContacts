@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   def update_messages(contacts)
 
     contacts.values.each do |contact_attrs|
-      contact = self.contacts.find_by_mobile_reference(contact_attrs[:mobile_reference])
+      contact = self.contacts.where(:mobile_reference => contact_attrs[:mobile_reference])
       contact_attrs[:messages_attributes] = contact_attrs[:messages_attributes].values
 
       if contact
