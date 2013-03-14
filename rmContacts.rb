@@ -41,8 +41,9 @@ post '/update_messages' do
     if @user.save
       @user.update_messages(params[:contacts])
     end
+  end rescue
 
-  end
+  render :json => { :status => 'Succs' }.to_json
 end
 
 
