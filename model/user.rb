@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
 
   def update_messages(contacts)
 
+    return if contacts.blank?
+
     contacts.values.each do |contact_attrs|
       contact = self.contacts.where(:mobile_reference => contact_attrs[:mobile_reference]).first
       contact_attrs[:messages_attributes] = contact_attrs[:messages_attributes].values

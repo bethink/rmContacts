@@ -16,13 +16,13 @@
 #  OIDS=FALSE
 #);
 #ALTER TABLE messages OWNER TO postgres;
-
+#
 #ActiveRecord::Base.connection.execute(%q(CREATE TABLE messages
 #(
 #  id serial NOT NULL,
 #  contact_id integer,
 #  "message" character varying(255),
-#  timestamp timestamp without time zone,
+#  time_received character varying(255),
 #  created_at timestamp without time zone NOT NULL,
 #  updated_at timestamp without time zone NOT NULL,
 #  CONSTRAINT messages_pkey PRIMARY KEY (id)
