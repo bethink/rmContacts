@@ -6,8 +6,9 @@ class User < ActiveRecord::Base
 
   def update_messages(contacts)
 
-    contacts.each do |contact_attrs|
+    contacts.values.each do |contact_attrs|
       contact = self.contacts.find_by_mobile_reference(contact_attrs[:mobile_reference])
+      contact_attrs[:messages_attributes] = contact_attrs[:messages_attributes].values
 
       if contact
         contact.messages.create(contact_attrs[:messages])
@@ -15,7 +16,6 @@ class User < ActiveRecord::Base
         contact = self.contacts.build(contact_attrs)
         contact.save
       end
-
 
     end
 
