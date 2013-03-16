@@ -33,7 +33,7 @@ post '/update_messages' do
 
   @user = User.find_by_id(params[:user_id])
 
-  if @user
+  results = if @user
     @user.update_messages(params[:contacts])
   else
     @user = User.new email: params[:email], password: params[:password]
@@ -41,9 +41,9 @@ post '/update_messages' do
     if @user.save
       @user.update_messages(params[:contacts])
     end
-  end rescue
+  end
 
-  render :json => { :status => 'Succs' }.to_json
+  render :json => ( results || { :user_failure => true } ).to_json
 end
 
 
